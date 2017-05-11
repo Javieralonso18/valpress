@@ -197,9 +197,9 @@ ES : Inicializar en dentro de un script o main.js sus input text , textarea u ot
 
 ## Credits | Creditos
 
-Programmer: Uceda Maza Javieralonso
-Facebook: https://www.facebook.com/javieralonsoum
-GitHub: https://github.com/Javieralonso18/valpress/
+Programmer: Uceda Maza Javieralonso <br>
+Facebook: https://www.facebook.com/javieralonsoum <br>
+GitHub: https://github.com/Javieralonso18/valpress/ 
 
 ## License | Licencia
 
