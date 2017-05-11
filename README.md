@@ -17,26 +17,59 @@ ES : Incluye este script en tu pagina web.Debe tener instalado ademas Jquery.
 EN : All printable characters can be entered.<br>
 ES : Se pueden ingresar todos los caracteres imprimibles.
 
+$("#password").valpress({<br>
+    all:true<br>
+  });<br>
+
 ### number (boolean)
 EN : You can only enter numbers.<br>
 ES : Solo se puede ingresar numeros.
+
+$("#edad").valpress({<br>
+    number:true<br>
+  });<br>
 
 ### number_roman (boolean)
 EN : Only Roman numerals can be entered.<br>
 ES : Solo se puede ingresar numeros romanos.
 
+$("#category").valpress({<br>
+    number_roman:true<br>
+  });<br>
+
 ### letter (boolean)
 EN : You can only enter letters.<br>
 ES : Solo se puede ingresar letras.
+
+$("#nombre").valpress({<br>
+    letter:true<br>
+  });<br>
 
 ### space (boolean)
 EN : You can only enter spaces.<br>
 ES : Solo se puede ingresar espacios en blanco.
 
+$("#space").valpress({<br>
+    space:true <br>
+  });<br>
+
 ### include (string)(custom)
 EN : Handles autocompletion of the element.<br>
 ES : Recibe y valida una serie de caracteres.
 
+$("#user").valpress({<br>
+    all:true, <br>
+    exclude:"a,b,c"<br>
+  });<br>
+  <br>
+  or
+  <br>
+  <br>
+  $("#user").valpress({<br>
+    all:true,<br>
+    exclude:"ascii:97,ascii:98,ascii:99"<br>
+  });<br>
+  
 ### exclude (string)(custom)
 EN : Validates that the entered value is only repeated once.<br>
 ES : Recibe e invalida una serie de caracteres.
