@@ -143,7 +143,7 @@ EN : Initialize in a script or main.js its input text, textarea or other element
 ES : Valida que no se puedan ingresar más de un espacio seguido.
 
 $("#name").valpress({<br>
-    all:true,
+    all:true,<br>
     space:true,<br>
     _follow_space:true
   });<br>
@@ -153,7 +153,7 @@ EN : Initialize in a script or main.js its input text, textarea or other element
 ES : Valida la funcionalidad de las teclas de control.
 
 $("#name").valpress({<br>
-    all:true,
+    all:true,<br>
     _controls:true<br>
   });<br>
 
@@ -162,7 +162,7 @@ EN : Initialize in a script or main.js its input text, textarea or other element
 ES : Valida la funcion del enter para evitar que se envie el formulario por equivocación.
 
 $("#name").valpress({<br>
-    all:true,
+    all:true,<br>
     _enter:true<br>
   });<br>
   
@@ -196,7 +196,7 @@ EN : Initialize in a script or main.js its input text, textarea or other element
 ES : Inicializar en dentro de un script o main.js sus input text , textarea u otro elemento a validar.
 
   $("#fu_telef , #fu_dni").valpress({<br>
-    number:true,
+    number:true,<br>
     include:"#"<br>
   });<br>
 
