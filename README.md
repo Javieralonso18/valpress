@@ -166,6 +166,30 @@ $("#name").valpress({<br>
     _enter:true<br>
   });<br>
   
+### _copyoff (boolean)(default=false)
+EN : Protects the contents of the field against the user's copy.<br>
+ES : Protege el contenido del campo contra copia del usuario.
+
+$("#clavesol").valpress({<br>
+    _copyoff:true<br>
+  });<br>
+  
+### _cutoff (boolean)(default=false)
+EN : Protects the contents of the field against the user's cut.<br>
+ES : Protege el contenido del campo contra cortado del usuario.
+
+$("#clavesol").valpress({<br>
+    _cutoff:true<br>
+  });<br>
+  
+### _pasteoff (boolean)(default=false)
+EN : Protects the contents of the field against the user's paste.<br>
+ES : Protege el contenido del campo contra pegado del usuario.
+
+$("#clavesol").valpress({<br>
+    _pasteoff:true<br>
+  });<br>
+  
 ## Usage | Uso
 
 EN : Initialize in a script or main.js its input text, textarea or other element to validate.<br>
