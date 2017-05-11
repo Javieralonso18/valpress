@@ -11,6 +11,37 @@ ES : Incluye este script en tu pagina web.Debe tener instalado ademas Jquery.
 <script type="text/javascript" src="jquery.min.js"></script>
 <b><script type="text/javascript" src="jquery.valpress.min.js"></script></b>
 
+## Predefined validations | Validaciones predefinidas
+
+### all (boolean)
+EN : All printable characters can be entered.<br>
+ES : Se pueden ingresar todos los caracteres imprimibles.
+
+### number (boolean)
+EN : You can only enter numbers.<br>
+ES : Solo se puede ingresar numeros.
+
+### number_roman (boolean)
+EN : Only Roman numerals can be entered.<br>
+ES : Solo se puede ingresar numeros romanos.
+
+### letter (boolean)
+EN : You can only enter letters.<br>
+ES : Solo se puede ingresar letras.
+
+### space (boolean)
+EN : You can only enter spaces.<br>
+ES : Solo se puede ingresar espacios en blanco.
+
+### include (string)(custom)
+EN : Handles autocompletion of the element.<br>
+ES : Recibe y valida una serie de caracteres.
+
+### exclude (string)(custom)
+EN : Validates that the entered value is only repeated once.<br>
+ES : Recibe e invalida una serie de caracteres.
+
+
 ## Properties | Propiedades
 
 ### _maxlength (integer)
