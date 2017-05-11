@@ -141,19 +141,6 @@ jQuery.fn.valpress = function(parameter) {
   return sw;
 }
 
-$(this).on('paste', function(e) {
-  var clip =  e.originalEvent.clipboardData.getData('Text');
-  if(clip.length > 0){
-    var array_paste = clip.split('');
-    for (var i = 0; i < array_paste.length ; i++) {
-      if (validate(array_paste[i].charCodeAt(),$(this).val())){
-        e.preventDefault();
-        return false;
-      }
-    }
-  }
-});
-
 if (movil){
   $(this).on('keyup',function(e){
     var val = $(this).val();
@@ -168,6 +155,35 @@ if (!movil){
     if (validate(e.which,$(this).val())){
       e.preventDefault();
     }
+  });
+}
+
+$(this).on('paste', function(e) {
+  if(parameter._pasteoff == true){
+   e.preventDefault();
+ }else{
+  var clip =  e.originalEvent.clipboardData.getData('Text');
+  if(clip.length > 0){
+    var array_paste = clip.split('');
+    for (var i = 0; i < array_paste.length ; i++) {
+      if (validate(array_paste[i].charCodeAt(),$(this).val())){
+        e.preventDefault();
+        return false;
+      }
+    }
+  }
+}
+});
+
+if(parameter._copyoff == true){
+  $(this).on('copy', function(e) {
+    e.preventDefault();
+  });
+}
+
+if(parameter._cutoff == true){
+  $(this).on('cut', function(e) {
+    e.preventDefault();
   });
 }
 
