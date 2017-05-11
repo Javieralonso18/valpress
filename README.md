@@ -91,41 +91,84 @@ $("#user").valpress({<br>
 EN : Limits the number of characters entered to a specified maximum.<br>
 ES : Limita el numero de caracteres ingresados a un maximo especificado.
 
+$("#year").valpress({<br>
+    number:true,
+    _maxlength:4<br>
+  });<br>
+
 ### _minlength (integer)
 EN : Limits the number of characters entered to a specified minimum.<br>
 ES : Limita el numero de caracteres ingresados a un minimo especificado.
 
+$("#year").valpress({<br>
+    number:true,
+    _maxlength:4,
+    _minlength:4<br>
+  });<br>
+  
 ### _readonly (boolean)(default=false)
 EN : Prevents typing in the element.<br>
 ES : Evita que se puede escribir en el elemento.
+
+$("#name").valpress({<br>
+    all:true,
+    _readonly:true<br>
+  });<br>
 
 ### _autocomplete (boolean)(default=false)
 EN : Handles autocompletion of the element.<br>
 ES : Maneja el autocompletado del elemento.
 
+$("#name").valpress({<br>
+    all:true,
+    _autocomplete:true<br>
+  });<br>
+  
 ### _unique (string)
 EN : Validates that the entered value is only repeated once.<br>
 ES : Valida que el valor ingresado solo se repita una sola vez.
 
+$("#mail").valpress({<br>
+    all:true,<br>
+    _unique:"@"
+  });<br>
+  
 ### _follow_space (boolean)(default=false)
 EN : Initialize in a script or main.js its input text, textarea or other element to validate.<br>
-ES : Valida que no se puedan ingresar mas de un espacio seguido.
+ES : Valida que no se puedan ingresar más de un espacio seguido.
+
+$("#name").valpress({<br>
+    all:true,
+    space:true,<br>
+    _follow_space:true
+  });<br>
 
 ### _controls (boolean)(default=true)
 EN : Initialize in a script or main.js its input text, textarea or other element to validate.<br>
 ES : Valida la funcionalidad de las teclas de control.
 
+$("#name").valpress({<br>
+    all:true,
+    _controls:true<br>
+  });<br>
+
 ### _enter (boolean)(default=false)
 EN : Initialize in a script or main.js its input text, textarea or other element to validate.<br>
 ES : Valida la funcion del enter para evitar que se envie el formulario por equivocación.
 
+$("#name").valpress({<br>
+    all:true,
+    _enter:true<br>
+  });<br>
+  
 ## Usage | Uso
 
 EN : Initialize in a script or main.js its input text, textarea or other element to validate.<br>
 ES : Inicializar en dentro de un script o main.js sus input text , textarea u otro elemento a validar.
 
   $("#fu_telef , #fu_dni").valpress({<br>
-    number:true<br>
+    number:true,
+    include:"#"<br>
   });<br>
 
   $("#fu_nombre , #fu_apepat , #fu_apemat").valpress({<br>
@@ -152,11 +195,11 @@ ES : Inicializar en dentro de un script o main.js sus input text , textarea u ot
   });
 
 
-
-
 ## Credits | Creditos
 
-
+Programmer: Uceda Maza Javieralonso
+Facebook: https://www.facebook.com/javieralonsoum
+GitHub: https://github.com/Javieralonso18/valpress/
 
 ## License | Licencia
 
