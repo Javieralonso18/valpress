@@ -92,7 +92,7 @@ EN : Limits the number of characters entered to a specified maximum.<br>
 ES : Limita el numero de caracteres ingresados a un maximo especificado.
 
 $("#year").valpress({<br>
-    number:true,
+    number:true,<br>
     _maxlength:4<br>
   });<br>
 
@@ -101,8 +101,8 @@ EN : Limits the number of characters entered to a specified minimum.<br>
 ES : Limita el numero de caracteres ingresados a un minimo especificado.
 
 $("#year").valpress({<br>
-    number:true,
-    _maxlength:4,
+    number:true,<br>
+    _maxlength:4,<br>
     _minlength:4<br>
   });<br>
   
@@ -111,7 +111,7 @@ EN : Prevents typing in the element.<br>
 ES : Evita que se puede escribir en el elemento.
 
 $("#name").valpress({<br>
-    all:true,
+    all:true,<br>
     _readonly:true<br>
   });<br>
 
@@ -120,7 +120,7 @@ EN : Handles autocompletion of the element.<br>
 ES : Maneja el autocompletado del elemento.
 
 $("#name").valpress({<br>
-    all:true,
+    all:true,<br>
     _autocomplete:true<br>
   });<br>
   
@@ -130,12 +130,12 @@ ES : Valida que el valor ingresado solo se repita una sola vez.
 
 $("#mail").valpress({<br>
     all:true,<br>
-    _unique:"@"
+    _unique:"@"<br>
   });<br>
   
   $("#mail").valpress({<br>
     all:true,<br>
-    _unique:"ascii:64"
+    _unique:"ascii:64"<br>
   });<br>
   
 ### _follow_space (boolean)(default=false)
@@ -145,7 +145,7 @@ ES : Valida que no se puedan ingresar más de un espacio seguido.
 $("#name").valpress({<br>
     all:true,<br>
     space:true,<br>
-    _follow_space:true
+    _follow_space:true<br>
   });<br>
 
 ### _controls (boolean)(default=true)
@@ -216,12 +216,12 @@ ES : Inicializar en dentro de un script o main.js sus input text , textarea u ot
     all:true,<br>
     _unique:"@",<br>
     _autocomplete:false<br>
-  });
+  });<br>
 
   $("#fu_clave ,#fu_clave2").valpress({<br>
     all:true,<br>
     _autocomplete:false<br>
-  });
+  });<br>
 
 
 ## Credits | Creditos
