@@ -58,6 +58,21 @@ EN : Handles autocompletion of the element.<br>
 ES : Recibe y valida una serie de caracteres.
 
 $("#user").valpress({<br>
+    include:"a,b,c"<br>
+  });<br>
+  <br>
+  or
+  <br>
+  <br>
+  $("#user").valpress({<br>
+    include:"ascii:97,ascii:98,ascii:99"<br>
+  });<br>
+  
+### exclude (string)(custom)
+EN : Validates that the entered value is only repeated once.<br>
+ES : Recibe e invalida una serie de caracteres.
+
+$("#user").valpress({<br>
     all:true, <br>
     exclude:"a,b,c"<br>
   });<br>
@@ -69,11 +84,6 @@ $("#user").valpress({<br>
     all:true,<br>
     exclude:"ascii:97,ascii:98,ascii:99"<br>
   });<br>
-  
-### exclude (string)(custom)
-EN : Validates that the entered value is only repeated once.<br>
-ES : Recibe e invalida una serie de caracteres.
-
 
 ## Properties | Propiedades
 
