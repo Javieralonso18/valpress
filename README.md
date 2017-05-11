@@ -13,6 +13,37 @@ ES : Incluye este script en tu pagina web.Debe tener instalado ademas Jquery.
 
 ## Properties | Propiedades
 
+### _maxlength (integer)
+EN : Limits the number of characters entered to a specified maximum.<br>
+ES : Limita el numero de caracteres ingresados a un maximo especificado.
+
+### _minlength (integer)
+EN : Limits the number of characters entered to a specified minimum.<br>
+ES : Limita el numero de caracteres ingresados a un minimo especificado.
+
+### _readonly (boolean)(default=false)
+EN : Prevents typing in the element.<br>
+ES : Evita que se puede escribir en el elemento.
+
+### _autocomplete (boolean)(default=false)
+EN : Handles autocompletion of the element.<br>
+ES : Maneja el autocompletado del elemento.
+
+### _unique (string)
+EN : Validates that the entered value is only repeated once.<br>
+ES : Valida que el valor ingresado solo se repita una sola vez.
+
+### _follow_space (boolean)(default=false)
+EN : Initialize in a script or main.js its input text, textarea or other element to validate.<br>
+ES : Valida que no se puedan ingresar mas de un espacio seguido.
+
+### _controls (boolean)(default=true)
+EN : Initialize in a script or main.js its input text, textarea or other element to validate.<br>
+ES : Valida la funcionalidad de las teclas de control.
+
+### _enter (boolean)(default=false)
+EN : Initialize in a script or main.js its input text, textarea or other element to validate.<br>
+ES : Valida la funcion del enter para evitar que se envie el formulario por equivocación.
 
 ## Usage | Uso
 
@@ -55,5 +86,5 @@ ES : Inicializar en dentro de un script o main.js sus input text , textarea u ot
 
 ## License | Licencia
 
-EN : You can view the license in LICENSE.md
+EN : You can view the license in LICENSE.md <br>
 ES : Puede ver la licencia en LICENSE.md
