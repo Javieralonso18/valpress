@@ -133,6 +133,11 @@ $("#mail").valpress({<br>
     _unique:"@"
   });<br>
   
+  $("#mail").valpress({<br>
+    all:true,<br>
+    _unique:"ascii:64"
+  });<br>
+  
 ### _follow_space (boolean)(default=false)
 EN : Initialize in a script or main.js its input text, textarea or other element to validate.<br>
 ES : Valida que no se puedan ingresar más de un espacio seguido.
