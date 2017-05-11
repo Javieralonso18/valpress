@@ -43,19 +43,30 @@ if (parameter._unique){
   if (parameter._unique.length > 0){
     var array_yes= parameter._unique.replace(" ","").split(",");
     array_yes.forEach(function(entry) {
-
       var cuenta = 0;
-      var posicion = data.indexOf(entry.replace("ascii:",""));
+      if (entry.indexOf("ascii:") == -1 ){
+        var posicion = data.indexOf(entry);
+        while ( posicion != -1 ) {
+         cuenta++;
+         posicion = data.indexOf(entry,posicion+1);
+       }
+
+       if (((movil && cuenta > 1) || (!movil && cuenta == 1))&&  entry.charCodeAt() == val){
+        sw=true;
+      }
+    }else{
+      var entryparse =  String.fromCharCode(entry.replace("ascii:",""));
+      var posicion = data.indexOf(entryparse);
       while ( posicion != -1 ) {
        cuenta++;
-       posicion = data.indexOf(entry.replace("ascii:",""),posicion+1);
+       posicion = data.indexOf(entryparse,posicion+1);
      }
 
-     if (((movil && cuenta > 1) || (!movil && cuenta == 1))&&  entry.replace("ascii:","").charCodeAt()== val){
+     if (((movil && cuenta > 1) || (!movil && cuenta == 1))&&  entry.replace("ascii:","") == val){
       sw=true;
     }
-
-  });
+  }
+});
   }
 }
 
