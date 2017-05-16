@@ -1,4 +1,4 @@
-# Valpress v1.0
+# Valpress v1.5
 
 EN : Framework for javascript + jquery with which you can validate in real time what users enter and only allow them to enter valid data.It works in any browser and platform. <br>
 ES : Marco de trabajo para javascript + jquery con el cual podrá validar en tiempo real lo que ingresen los usuarios y solo permitir que pulsen datos validos.Funciona en cualquier navegador y plataforma.
@@ -190,6 +190,18 @@ $("#clavesol").valpress({<br>
     _pasteoff:true<br>
   });<br>
   
+### _dropoff (boolean)(default=false)
+EN : Protects the contents of the field against the user's paste.<br>
+ES : Protege el contenido del campo contra pegado del usuario.
+
+$("#clavesol").valpress({<br>
+    _dropoff:true<br>
+  });<br>
+<br>
+NOTA EN: Valpress detects and validates even data entered through the clipboard or drag but can generate more consumption of resources that is why you can use the options _off.
+<br>
+NOTA ES: Valpress detecta y valida incluso datos incresados a traves del portapapeles o el arrastre sin embargo puede generar mas consumo de recursos es por eso que puede usar las opciones _off.
+<br>
 ## Usage | Uso
 
 EN : Initialize in a script or main.js its input text, textarea or other element to validate.<br>
