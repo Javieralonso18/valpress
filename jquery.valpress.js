@@ -1,15 +1,17 @@
 /*!
- * Valpress - v1.0
+ * Valpress - v1.5
  * Copyright (c) 2017 Javieralonso Uceda Maza (PE)
  * https://www.facebook.com/javieralonsoum
  */
+/*<BODY oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+</body>*/
 
- var device = navigator.userAgent ;
- var movil =  false;
- if (device.match(/Iphone/i)|| device.match(/Ipod/i)|| device.match(/Android/i)|| device.match(/J2ME/i)|| device.match(/BlackBerry/i)|| device.match(/iPhone|iPad|iPod/i)|| device.match(/Opera Mini/i)|| device.match(/IEMobile/i)|| device.match(/Mobile/i)|| device.match(/Windows Phone/i)|| device.match(/windows mobile/i)|| device.match(/windows ce/i)|| device.match(/webOS/i)|| device.match(/palm/i)|| device.match(/bada/i)|| device.match(/series60/i)|| device.match(/nokia/i)|| device.match(/symbian/i)|| device.match(/HTC/i))
-   { movil =true;}
+var device = navigator.userAgent ;
+var movil =  false;
+if (device.match(/Iphone/i)|| device.match(/Ipod/i)|| device.match(/Android/i)|| device.match(/J2ME/i)|| device.match(/BlackBerry/i)|| device.match(/iPhone|iPad|iPod/i)|| device.match(/Opera Mini/i)|| device.match(/IEMobile/i)|| device.match(/Mobile/i)|| device.match(/Windows Phone/i)|| device.match(/windows mobile/i)|| device.match(/windows ce/i)|| device.match(/webOS/i)|| device.match(/palm/i)|| device.match(/bada/i)|| device.match(/series60/i)|| device.match(/nokia/i)|| device.match(/symbian/i)|| device.match(/HTC/i))
+ { movil =true;}
 
- function opc (parameter,val,sw,data){
+function opc (parameter,val,sw,data){
 
   if (parameter.space == true){
    if (val== 32){
@@ -156,6 +158,36 @@ if (!movil){
       e.preventDefault();
     }
   });
+
+  var sw_drop = false;
+  $(this).on('drop', function(e) {
+    if(parameter._dropoff == true){
+      sw_drop = false;
+      e.preventDefault();
+      e.stopPropagation();
+    }else{
+      $(this).focus();
+      sw_drop = true;
+    }
+  });
+
+  $(this).on('mousemove', function(e) {
+    if (sw_drop){
+      $(this).focus();
+      var clip =  $(this).val();
+      if(clip.length > 0){
+        var array_paste = clip.split('');
+        for (var i = 0; i < array_paste.length ; i++) {
+          if (validate(array_paste[i].charCodeAt(),$(this).val())){
+            $(this).val("");
+            return false;
+          }
+        }
+      }
+      sw_drop= false;
+    }
+  });
+
 }
 
 $(this).on('paste', function(e) {
