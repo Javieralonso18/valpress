@@ -3,8 +3,6 @@
  * Copyright (c) 2017 Javieralonso Uceda Maza (PE)
  * https://www.facebook.com/javieralonsoum
  */
-/*<BODY oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
-</body>*/
 
 var device = navigator.userAgent ;
 var movil =  false;
