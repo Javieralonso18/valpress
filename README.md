@@ -54,7 +54,7 @@ $("#space").valpress({<br>
   });<br>
 
 ### include (string)(custom)
-EN : Handles autocompletion of the element.<br>
+EN : Invalidates that the entered value is only repeated once.<br>
 ES : Recibe y valida una serie de caracteres.
 
 $("#user").valpress({<br>
